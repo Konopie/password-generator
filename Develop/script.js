@@ -31,9 +31,8 @@ var passwordLengthPrompt = function() {
    }
    //  convert string to numbers
    lengthPrompt = parseInt(lengthPrompt);
-   //  Log result 
-   console.log(lengthPrompt)
 
+   // subtract 1 becuase later array starts at 0
     return lengthPrompt - 1
 
   }
@@ -125,10 +124,11 @@ var includeSpecialChar = function() {
 
 // when the generate passowrd function is called 
 var generatePassword = function() {
-  var charCodes = []
+  // variable to store prompt result
   var lengthPrompt = passwordLengthPrompt();
   
-  
+  //empty array to store added arrays
+  var charCodes = []
   // if lowercase prompt equals true, include lowercase
   if (includeLowercaseChar()) {
    console.log("include lowercase")
@@ -151,7 +151,7 @@ var generatePassword = function() {
     window.alert("Select atleast one valid option")
   }
   
-
+// variables needed for loop
 var charCodeLength = charCodes.length
 var passwordCharacters = []
 // loop for random number and convert number into a string using character
@@ -161,10 +161,7 @@ for (var i = 0; i <= lengthPrompt; i++) { // code found in a youtube tutorial
   }
   console.log(passwordCharacters)
   return passwordCharacters.join('')
-
-
 }
-  
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
