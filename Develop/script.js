@@ -51,6 +51,7 @@ var includeLowercaseChar = function() {
   // turn into lowercase for ease of coding
   lowercasePrompt = lowercasePrompt.toLowerCase();
 
+  // return true or false for yes or no
   if (lowercasePrompt === "yes") {
     return true;
   }
@@ -72,6 +73,7 @@ var uppercasePrompt = window.prompt("Include uppercase letters (YES or NO)")
   // turn into lowercase for ease of coding
   uppercasePrompt = uppercasePrompt.toLowerCase();
 
+  // return true or false for yes and no
   if (uppercasePrompt === "yes") {
     return true;
   }
@@ -93,6 +95,7 @@ var includeNumberChar = function() {
     // turn into lowercase for ease of coding
     numberPrompt = numberPrompt.toLowerCase();
   
+    // return true or false for yes and no
     if (numberPrompt === "yes") {
       return true;
     }
@@ -114,6 +117,7 @@ var includeSpecialChar = function() {
     // turn into lowercase for ease of coding
     specialPrompt = specialPrompt.toLowerCase();
   
+    // return true or false for yes and no
     if (specialPrompt === "yes") {
       return true;
     }
@@ -147,6 +151,7 @@ var generatePassword = function() {
     console.log("include special")
     charCodes = charCodes.concat(specialCharCodes)
    }
+  //  if nothing is selected, repeat until valid
   if (charCodes.length === 0)  {
     window.alert("Select atleast one valid option")
   }
@@ -160,6 +165,7 @@ for (var i = 0; i <= lengthPrompt; i++) { // code found in a youtube tutorial
     passwordCharacters.push(String.fromCharCode(characterCode))
   }
   console.log(passwordCharacters)
+  // turn the array into a string
   return passwordCharacters.join('')
 }
 
